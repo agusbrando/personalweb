@@ -1,0 +1,65 @@
+/* SPACES */
+
+$base: 8px;
+$xxxs: 16px;
+$xxs: 24px;
+$xs: 32px;
+$s: 48px;
+$m: 56px;
+$l: 64px;
+$xl: 80px;
+$xxl: 96px;
+$xxxl: 112px;
+$xl4: 152px;
+
+/* COLORS */
+
+$dark-black: #161216;
+$black: #32292F;
+$white: #EAE0D5;
+$green: #3C6E71;
+$red: #F2545B;
+$dark-red: #BF1363;
+
+
+/* TYPOGRAPHY */
+
+p
+{
+    margin: 0!important;
+}
+
+.title
+{
+
+    font-family: 'Signika';
+    font-size: 115px;
+    line-height: 100px;
+    font-weight: 700;
+    color: $white;
+    text-shadow: $red 5px 0 2px;
+    letter-spacing: -2px;
+
+
+    &::before
+    {
+  
+        position: absolute;
+        text-shadow: $green -5px 0 2px;
+        opacity: 0.66;
+        pointer-events: none;
+
+    }
+
+}
+
+.subtitle
+{
+
+    font-family: 'Roboto Slab';
+    font-size: 42px;
+    font-weight: 200;
+    color: $white;
+    text-shadow: $red 3px 0 2px;
+
+}

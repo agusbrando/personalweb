@@ -1,0 +1,69 @@
+.svgWrap 
+{
+
+    position: relative;
+    width: $m;
+    height: $m;
+    cursor: pointer;
+
+    .svgWrap__text 
+    {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        fill: $white;
+        background: $black;
+        width: $m;
+        height: $m;
+
+    }
+
+    &:hover
+    {
+
+        transform: scale(1.04) skewX(355deg);
+
+        .svgWrap__text 
+        {
+
+            &:nth-child(2),
+            &:nth-child(3) 
+            {
+                clip: rect(0, 0, 0, 0); 
+            }
+
+            &:nth-child(2) 
+            {
+                fill: $red; 
+                left: -2px;
+                animation: svg-glitch-effect 2s infinite linear alternate-reverse;
+            }
+
+            &:nth-child(3) 
+            {
+                fill: $white;
+                left: 2px;
+                animation: svg-glitch-effect 3s infinite linear alternate-reverse;
+            }
+
+        }
+
+    }
+
+}
+
+$steps: 20;
+
+@keyframes svg-glitch-effect
+{
+
+    @for $i from 0 through $steps
+    {
+        #{percentage($i*(calc(1 / $steps)))}
+        {
+            clip: rect(random($m) + px, $m, random($m) + px, 0);
+        }
+    }
+
+}

@@ -1,0 +1,41 @@
+#main_banner
+{
+
+    height: 80vh;
+    background-color: $black;
+
+    .text
+    {
+
+        padding-right: $xs;
+        padding-bottom: $l;
+
+        .title::before
+        {
+            content: 'agusbrando.';
+        }
+
+    }
+
+    .code
+    {
+
+        padding-left: $xs;
+        padding-bottom: $l;
+
+        .type_effect{
+            font-size: 14px;
+            font-family: "Roboto Slab";
+            box-shadow: $red 3px 3px 0px;
+            color: $white;
+            font-weight: 400;
+            width: 625px;
+            height: 465px;
+            padding: $xs;
+            background-color: $dark-black;
+            border-radius: $base - 2;
+        }
+
+    }
+   
+}
